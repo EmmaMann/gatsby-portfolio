@@ -8,6 +8,7 @@ interface IIntersectionObserverConfig {
 /**
  *
  * @param ref A react reference with any element
+ * @param config An object with the rootMargin & threshold
  * @returns Wheterh the element is visible on the screen
  */
 

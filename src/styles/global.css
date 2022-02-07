@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*************
 * NAVIGATION *
 **************/
@@ -86,6 +90,10 @@ h1 {
 input::placeholder,
 textarea::placeholder {
     @apply text-dark;
+}
+
+.card-img img[data-loading] {
+    bottom: -20px;
 }
 
 /****************

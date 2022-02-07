@@ -47,7 +47,7 @@ const HomePage: FC<{}> = ({}) => {
                             image={project?.image}
                             link={project?.siteUrl}
                             newTab={true}
-                            delay={i % 2 === 1 ? "500" : "250"}
+                            delay={i % 2 === 1 ? "250" : "0"}
                         />
                     );
                 })}

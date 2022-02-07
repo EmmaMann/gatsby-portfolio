@@ -89,13 +89,16 @@ h1 {
 }
 input::placeholder,
 textarea::placeholder {
-    @apply text-dark;
+    @apply text-dark opacity-70;
 }
 
 .card-img img[data-loading] {
     bottom: -20px;
 }
 
+.anim-arrow:hover span {
+    @apply translate-x-1;
+}
 /****************
 * MEDIA QUERIES * 
  ****************/

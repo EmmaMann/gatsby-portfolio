@@ -651,8 +651,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 83.333333%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
 .translate-x-96 {
   --tw-translate-x: 24rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -668,12 +688,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: wrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-y-8 {
@@ -684,8 +720,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 1.5rem;
 }
 
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
 .self-end {
   align-self: flex-end;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-sm {
@@ -751,6 +796,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(190 90 50 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -789,6 +844,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pl-8 {
   padding-left: 2rem;
 }
@@ -811,6 +881,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-32 {
   padding-top: 8rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-right {
@@ -840,8 +914,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .capitalize {
@@ -884,6 +967,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.9;
 }
 
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -920,8 +1011,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 700ms;
 }
 
+.duration-75 {
+  transition-duration: 75ms;
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.hover\:-translate-y-0\.5:hover {
+  --tw-translate-y: -0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:-translate-y-0:hover {
+  --tw-translate-y: -0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:scale-102:hover {
@@ -932,6 +1037,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:gap-x-2:hover {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .focus\:border-secondary:focus {

@@ -52,7 +52,7 @@ const Card: FC<ICardProps> = ({
             />
             <GatsbyImage
                 image={image.asset.gatsbyImageData}
-                alt={title}
+                alt={`${title} site preview`}
                 className="rounded-t-lg"
             />
             <div className="p-6">

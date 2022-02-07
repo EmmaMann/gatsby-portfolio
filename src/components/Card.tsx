@@ -1,7 +1,6 @@
 import { GatsbyImage } from "gatsby-plugin-image";
-import React, { FC, useRef } from "react";
+import React, { FC } from "react";
 import { Heading } from ".";
-import { useOnScreen } from "../hooks";
 
 export interface ICardProps {
     /**
@@ -38,16 +37,8 @@ const Card: FC<ICardProps> = ({
     newTab = false,
     title,
 }) => {
-    const cardRef = useRef();
-    const isShowing = useOnScreen(cardRef, {
-        rootMargin: "",
-        threshold: [],
-    });
-    console.log(isShowing);
-
     return (
         <div
-            ref={cardRef}
             className="relative z-10 transition-all rounded-lg shadow-md hover:scale-102 min-h-96"
             data-sal="slide-up"
             data-sal-easing="ease"

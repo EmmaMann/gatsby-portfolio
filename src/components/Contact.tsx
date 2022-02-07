@@ -15,7 +15,7 @@ const Contact: FC<{}> = ({}) => {
     });
 
     const inputClasses =
-        "w-full bg-primary text-dark text-xl rounded-lg border-none px-5 py-3";
+        "w-full bg-primary text-dark text-xl rounded-lg border-none px-5 py-3 focus:ring-secondary focus:border-secondary";
 
     return (
         <div className="relative py-8 lg:py-16">

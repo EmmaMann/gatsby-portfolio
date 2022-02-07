@@ -1,30 +1,28 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImageDataArgs } from "gatsby-source-sanity";
 import React, { FC } from "react";
 import { About, Card, HomeHeader, Contact, Row } from "../components";
-// import { projects } from "../staticData";
+
+interface IProject {
+    id: string;
+    title: string;
+    excerpt: string;
+    siteUrl: string;
+    image: { asset: GatsbyImageDataArgs };
+}
 
 const HomePage: FC<{}> = ({}) => {
-    const { allSanitySampleProject: projects } = useStaticQuery(graphql`
-        query {
-            allSanitySampleProject(sort: { order: ASC, fields: _createdAt }) {
-                edges {
-                    node {
-                        id
-                        title
-                        slug {
-                            current
-                        }
-                        excerpt {
-                            children {
-                                text
-                            }
-                        }
-                        mainImage {
-                            alt
-                            asset {
-                                title
-                                url
-                            }
+    const { allSanityProject: projects } = useStaticQuery(graphql`
+        query GetAllProjects {
+            allSanityProject(sort: { order: ASC, fields: _createdAt }) {
+                nodes {
+                    id
+                    title
+                    excerpt
+                    siteUrl
+                    image {
+                        asset {
+                            gatsbyImageData
                         }
                     }
                 }
@@ -32,7 +30,6 @@ const HomePage: FC<{}> = ({}) => {
         }
     `);
 
-    console.log(projects);
     return (
         <>
             <HomeHeader />
@@ -41,21 +38,16 @@ const HomePage: FC<{}> = ({}) => {
                 className="grid gap-6 py-8 lg:gap-10 lg:grid-cols-2 lg:py-16 "
                 rowId="projects"
             >
-                {projects?.edges?.map(({ node }) => {
-                    console.log(node?.mainImage.asset);
+                {projects?.nodes?.map((project: IProject, i: number) => {
                     return (
                         <Card
-                            key={node?.id}
-                            title={node?.title}
-                            description={
-                                node?.excerpt?.[0]?.children?.[0]?.text
-                            }
-                            image={{
-                                src: node?.mainImage?.asset?.url,
-                                alt: node?.mainImage?.asset?.alt,
-                            }}
-                            link={node?.slug?.current}
+                            key={project?.id}
+                            title={project?.title}
+                            description={project?.excerpt}
+                            image={project?.image}
+                            link={project?.siteUrl}
                             newTab={true}
+                            delay={i % 2 === 1 ? "500" : "250"}
                         />
                     );
                 })}

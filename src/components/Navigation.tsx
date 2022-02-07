@@ -11,7 +11,7 @@ const Navigation: FC<{}> = ({}) => {
     return (
         <div className="w-full">
             <button
-                className={`fixed top-4 z-40 h-10 p-1 duration-200 w-11 hover:cursor-pointer mobile-menu block lg:hidden toggle-button`}
+                className={`fixed top-4 z-50 h-10 p-1 duration-200 w-11 hover:cursor-pointer mobile-menu block lg:hidden toggle-button`}
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="Open Menu"
             >
@@ -38,9 +38,9 @@ const Navigation: FC<{}> = ({}) => {
                     }`}
                 ></div>
             </button>
-            <div className={`mobile-menu z-50 ${menuOpen ? "menu-show" : ""}`}>
+            <div className={`mobile-menu z-40 ${menuOpen ? "menu-show" : ""}`}>
                 <nav
-                    className={`fixed top-0 bottom-0 lg:left-0 z-30 ${
+                    className={`fixed top-0 bottom-0 lg:bottom-auto lg:left-0 z-40 ${
                         menuOpen
                             ? "left-0 right-20 bg-primary opacity-90 transition-all duration-500"
                             : "-left-96 transition-all duration-100"
@@ -50,7 +50,7 @@ const Navigation: FC<{}> = ({}) => {
                         className={`z-50 flex-col lg:flex-row transition-all gap-y-8 flex lg:py-4 ${
                             menuOpen
                                 ? "top-0 bottom-0 right-20 pt-32 m-0 text-xl duration-500 menu-open"
-                                : "duration-100 opacity-0 lg:opacity-100 -z-1 menu-closed"
+                                : "duration-100 lg:opacity-100 -z-1 menu-closed lg:-left-96"
                         }`}
                     >
                         {navigation?.map((item) => (

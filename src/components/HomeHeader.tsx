@@ -10,7 +10,7 @@ const HomeHeader: FC<{}> = ({}) => {
         <>
             <div ref={scrollRef} className="absolute top-0 w-full h-px"></div>
             <div
-                className={`z-40 flex flex-col justify-end h-screen transition-all duration-700  squares-bg ${
+                className={`z-30 flex flex-col justify-end h-screen transition-all duration-700  squares-bg ${
                     isScrolled ? "scrollHeader" : ""
                 }`}
             >

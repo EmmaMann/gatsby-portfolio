@@ -22,8 +22,8 @@ const HomeHeader: FC<{}> = ({}) => {
                     >
                         emma
                     </h1>
-                    <h2 className="pb-8 text-xl text-right text-chocolate">
-                        web design | development
+                    <h2 className="pb-12 -mt-10 text-2xl text-right text-chocolate">
+                        web development
                     </h2>
                 </Row>
             </div>

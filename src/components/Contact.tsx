@@ -64,9 +64,11 @@ const Contact: FC<{}> = ({}) => {
                         className="flex flex-col gap-y-6"
                         onSubmit={(e) => submitForm(e)}
                     >
-                        <div className="flex flex-col gap-y-6">
+                        <div className="flex flex-col gap-y-10">
                             <div className="flex flex-wrap">
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="name" className="sr-only">
+                                    Name
+                                </label>
                                 <input
                                     type="text"
                                     placeholder="Name"
@@ -85,7 +87,9 @@ const Contact: FC<{}> = ({}) => {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="email">Email Address</label>
+                                <label htmlFor="email" className="sr-only">
+                                    Email Address
+                                </label>
                                 <input
                                     type="email"
                                     placeholder="email@example.com"
@@ -105,7 +109,9 @@ const Contact: FC<{}> = ({}) => {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="message">Message</label>
+                                <label htmlFor="message" className="sr-only">
+                                    Message
+                                </label>
                                 <textarea
                                     id="message"
                                     name="message"

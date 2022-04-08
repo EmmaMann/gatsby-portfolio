@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "../styles/global.css";
-import { Navigation } from ".";
+import { Navigation, Row } from ".";
 import { Helmet } from "react-helmet";
 
 import "@fontsource/comfortaa";
@@ -19,7 +19,7 @@ const Layout: FC<{ title?: string; description?: string }> = ({
                     name="description"
                     content={
                         description ||
-                        "Emma is an accomplished Front End web developer, with experience using React, NextJS, Gatsby, TailwindCSS and more."
+                        "Emma is an accomplished Front End web developer, with experience using React, NextJS, Typescript, Gatsby, TailwindCSS and more."
                     }
                 />
                 <meta
@@ -39,9 +39,14 @@ const Layout: FC<{ title?: string; description?: string }> = ({
                     }}
                 ></script>
             </Helmet>
-            <main className="font-body text-dark">
+            <main className="relative font-body text-dark">
                 <Navigation />
                 {children}
+                <Row>
+                    <small className="container absolute mx-auto bottom-4">
+                        &copy;Emma Mann | Made with Love (and Gatsby)
+                    </small>
+                </Row>
             </main>
         </>
     );
